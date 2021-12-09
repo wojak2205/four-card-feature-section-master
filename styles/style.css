@@ -1,0 +1,97 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container_title {
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.container_subtitle {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.container_description {
+  opacity: 70%;
+}
+
+.grid {
+  display: grid;
+  margin: 40px 100px 0 100px;
+  gap: 30px;
+  width: 1100px;
+}
+
+article[class^='grid_'] {
+  border-radius: 10px; 
+  margin: 5px;
+  padding:  20px;
+  background-color: #ffffff;
+  width: 300px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 10px hsl(229, 6%, 66%);
+}
+
+.grid_supervisor {
+  border-top: 3px solid #40d5d3;
+}
+
+.grid_teambuilder {
+  border-top: 3px solid #ea5551;
+}
+
+.grid_karma {
+  border-top: 3px solid #fbad4b;
+}
+
+.grid_calculator {
+  border-top: 3px solid #559cee;
+}
+
+.grid--contents {
+  opacity: 70%;
+}
+
+.grid--img {
+display: block;
+margin: 30px 10px 10px auto;
+}
+
+@media(min-width: 600px) {
+	.grid {
+		display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 40px auto 60px auto;
+	}
+
+  .grid_supervisor {
+    grid-area: 2/1/4/1;
+  }
+  
+  .grid_teambuilder {
+    grid-area: 1/2/3/2;
+  }
+  
+  .grid_karma {
+    grid-area: 3/2/5/2;
+  }
+  
+  .grid_calculator {
+    grid-area: 2/3/4/3;
+  }
+}
